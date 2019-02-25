@@ -1,0 +1,14 @@
+/* Ejemplo de la utilización de promesa o promise */
+let mipromesa = new Promise(function (resolve: any, reject: any) {
+    /* Las que siguen a continuación son dos funciones callback */
+    //resolve(); /* Si yo digo resolve estaría diciendo que la promesa se ejecutó sin problemas */
+    reject(); /* Si yo digo reject estaría diciendo que la promesa se ejecutó sin problemas */
+});
+
+mipromesa.then(function () { /* Aquí se evaluan el resolve(); y el reject(); */
+    /* Aquí iría la función de la operación promesa exitosa */
+    console.log('La operación de la promesa a finalizado con éxito');
+}, function () {
+    /* Aquí iría la función de la operación promesa con error */
+    console.log('La operación de la promesa a finalizado con error');
+});
